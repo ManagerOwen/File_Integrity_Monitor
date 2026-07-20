@@ -50,43 +50,6 @@ This project implements a lightweight, dependency-free FIM engine that:
 
 ---
 
-## Architecture
-
-```
-File_Integrity_Monitor/
-│
-├── main.py                  # CLI entry point / orchestration
-├── file_scanner.py          # Recursive file discovery
-├── hash_engine.py           # SHA-256 hashing
-├── baseline_manager.py      # Trusted baseline create/load/update
-├── integrity_checker.py     # Baseline vs. current-state comparison
-├── alert_manager.py         # Severity classification + alert formatting
-├── report_generator.py      # JSON / CSV / text report generation
-├── config.json               # System configuration
-│
-├── monitored_directory/     # Example files being watched
-├── baseline/                # Stored trusted baseline (baseline.json)
-├── reports/                 # Generated JSON / CSV / TXT reports
-├── logs/                    # fim.log audit trail
-│
-├── requirements.txt
-├── README.md
-└── sample_output.txt        # Example end-to-end run
-```
-
-Each module has a single responsibility, which keeps the system easy to
-test, extend, and reason about - the same modular design philosophy used
-in production security tooling.
-
-*Design note:* the baseline is stored as a local JSON file for this
-portfolio project. In a production deployment it would additionally be
-protected with restrictive file permissions, stored on separate/read-only
-media, and integrity-checked itself (e.g. via a signature) so an attacker
-who tampers with a monitored file cannot also silently edit the baseline
-to hide the change.
-
----
-
 ## Installation
 
 ```bash
