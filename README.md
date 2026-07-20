@@ -192,15 +192,13 @@ CRITICAL, and CRITICAL respectively.
 
 ## Security Concepts Demonstrated
 
-- **Cryptographic integrity verification** Using SHA-256 hashing to detect unauthorized changes to files.
-- **Endpoint security monitoring** Applying file monitoring concepts used in enterprise security environments.
-- **Digital forensics fundamentals** — Creating trusted baselines and identifying changes from known-good states.
-- **Threat detection & triage** — Classifying security events based on risk and investigation priority.
-- **MITRE ATT&CK mapping** — connecting observed events (data
-  manipulation, indicator removal, autostart execution) to known
-  adversary techniques
-- **Security automation** — Automating repetitive security monitoring and reporting tasks.
-- **Audit logging** — Maintaining records of security-relevant events for investigation.
+- **Cryptographic integrity verification** - Using SHA-256 hashing to detect unauthorized changes to files.
+- **Endpoint security monitoring** - Applying file monitoring concepts used in enterprise security environments.
+- **Digital forensics fundamentals** - Creating trusted baselines and identifying changes from known-good states.
+- **Threat detection & triage** - Classifying security events based on risk and investigation priority.
+- **MITRE ATT&CK mapping** - connecting observed events (data manipulation, indicator removal, autostart execution) to known adversary techniques
+- **Security automation** - Automating repetitive security monitoring and reporting tasks.
+- **Audit logging** - Maintaining records of security-relevant events for investigation.
 ---
 
 ## Future Improvements
