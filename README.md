@@ -1,7 +1,7 @@
 # File Integrity Monitoring System (FIM)
 
 A Python-based defensive security tool that detects unauthorized file
-changes using cryptographic hashing — conceptually similar to enterprise
+changes using cryptographic hashing - conceptually similar to enterprise
 File Integrity Monitoring solutions such as *Tripwire*, *OSSEC*, and
 *Wazuh*.
 
@@ -13,7 +13,7 @@ File Integrity Monitoring solutions such as *Tripwire*, *OSSEC*, and
 
 File Integrity Monitoring (FIM) is a core control in most security
 frameworks (PCI-DSS, NIST 800-53, CIS Controls) because it detects when
-critical files — configuration files, executables, system files — have
+critical files — configuration files, executables, system files - have
 been changed, added, or removed without authorization. These changes are
 often early indicators of malware infection, insider misuse, or an
 active intrusion.
