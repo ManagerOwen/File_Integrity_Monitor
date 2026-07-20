@@ -1,0 +1,2 @@
+Timestamp,Event Type,File,Old Hash,New Hash,Severity,Recommendation
+2026-07-20 12:41:32,MODIFIED FILE,important_config.conf,d73bb3fec31c1a3f69d84fd7cc5c9d7ad0333693a51ddd5aabb70fa6b135284f,3c1796e05afbdb92f35b0175c9fca3804b59649dba5025535513e6b693ddb72e,HIGH,Verify change authorization with the responsible team.; Investigate recent user and process activity on the host.; Review system and application logs around the timestamp.; Check the file and host for signs of malware infection.

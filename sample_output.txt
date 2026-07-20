@@ -1,0 +1,217 @@
+############################################
+STEP 0: Create trusted baseline
+############################################
+2026-07-20 09:13:33 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 09:13:33 INFO Baseline created with 3 file(s) at 'baseline/baseline.json'.
+
+Baseline created successfully with 3 file(s).
+Baseline stored at: baseline/baseline.json
+
+
+############################################
+STEP 1: Normal, low-risk file update
+############################################
+2026-07-20 09:13:34 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 09:13:34 INFO Integrity check complete: 1 modified, 0 new, 0 deleted, 2 unchanged.
+2026-07-20 09:13:34 WARNING MODIFIED FILE detected: sample_files.txt [Severity: LOW]
+
+Scan complete: 3 file(s) scanned.
+  Modified: 1   New: 0   Deleted: 0   Unchanged: 2
+
+1 alert(s) generated:
+
+=====================================
+FILE INTEGRITY ALERT
+=====================================
+
+Event Type:
+MODIFIED FILE
+
+File:
+sample_files.txt
+
+Severity:
+LOW
+
+Previous Hash:
+
+13c440c1330feef1d4ac4a3e264e75bf1b677826be31c3ce10ca08736616abaa
+
+Current Hash:
+
+b635ae6abcc73351e4c131ef039376ca2ce6cdd536ef28bdcb74efb0f8ec7275
+
+Timestamp:
+2026-07-20 09:13:34
+
+MITRE ATT&CK Reference:
+T1565 - Data Manipulation
+
+Recommendation:
+
+- Verify change authorization with the responsible team.
+- Investigate recent user and process activity on the host.
+- Review system and application logs around the timestamp.
+- Check the file and host for signs of malware infection.
+
+=====================================
+
+2026-07-20 09:13:34 INFO JSON report written to 'reports/integrity_report.json'.
+2026-07-20 09:13:34 INFO CSV report written to 'reports/integrity_report.csv'.
+2026-07-20 09:13:34 INFO Text summary report written to 'reports/incident_summary.txt'.
+Reports written to 'reports'
+
+
+############################################
+STEP 2: Unauthorized modification of a sensitive config file
+############################################
+2026-07-20 09:13:40 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 09:13:40 INFO Integrity check complete: 1 modified, 0 new, 0 deleted, 2 unchanged.
+2026-07-20 09:13:40 WARNING MODIFIED FILE detected: important_config.conf [Severity: HIGH]
+
+Scan complete: 3 file(s) scanned.
+  Modified: 1   New: 0   Deleted: 0   Unchanged: 2
+
+1 alert(s) generated:
+
+=====================================
+FILE INTEGRITY ALERT
+=====================================
+
+Event Type:
+MODIFIED FILE
+
+File:
+important_config.conf
+
+Severity:
+HIGH
+
+Previous Hash:
+
+d73bb3fec31c1a3f69d84fd7cc5c9d7ad0333693a51ddd5aabb70fa6b135284f
+
+Current Hash:
+
+08ff79df1147cb6c476cef41c98903e3d7971f70ca1518a026894b5855a91f86
+
+Timestamp:
+2026-07-20 09:13:40
+
+MITRE ATT&CK Reference:
+T1565 - Data Manipulation
+
+Recommendation:
+
+- Verify change authorization with the responsible team.
+- Investigate recent user and process activity on the host.
+- Review system and application logs around the timestamp.
+- Check the file and host for signs of malware infection.
+
+=====================================
+
+2026-07-20 09:13:40 INFO JSON report written to 'reports/integrity_report.json'.
+2026-07-20 09:13:40 INFO CSV report written to 'reports/integrity_report.csv'.
+2026-07-20 09:13:40 INFO Text summary report written to 'reports/incident_summary.txt'.
+Reports written to 'reports'
+
+
+############################################
+STEP 3: Suspicious new executable created (possible malware dropper)
+############################################
+2026-07-20 09:13:40 INFO File scan complete: 4 file(s) discovered in 'monitored_directory'.
+2026-07-20 09:13:40 INFO Integrity check complete: 0 modified, 1 new, 0 deleted, 3 unchanged.
+2026-07-20 09:13:40 WARNING NEW FILE detected: suspicious_tool.exe [Severity: CRITICAL]
+
+Scan complete: 4 file(s) scanned.
+  Modified: 0   New: 1   Deleted: 0   Unchanged: 3
+
+1 alert(s) generated:
+
+=====================================
+FILE INTEGRITY ALERT
+=====================================
+
+Event Type:
+NEW FILE
+
+File:
+suspicious_tool.exe
+
+Severity:
+CRITICAL
+
+Current Hash:
+
+2fdba9297baf2bdc90216b3c348dece78183d802764d1eefd69f423013215c0a
+
+Timestamp:
+2026-07-20 09:13:40
+
+MITRE ATT&CK Reference:
+T1547 - Boot or Logon Autostart Execution
+
+Recommendation:
+
+- Treat as a potential malware dropper until proven otherwise.
+- Isolate the host from the network pending investigation.
+- Submit the file hash to a threat intelligence platform.
+- Review autorun/startup locations for persistence mechanisms.
+
+=====================================
+
+2026-07-20 09:13:40 INFO JSON report written to 'reports/integrity_report.json'.
+2026-07-20 09:13:40 INFO CSV report written to 'reports/integrity_report.csv'.
+2026-07-20 09:13:40 INFO Text summary report written to 'reports/incident_summary.txt'.
+Reports written to 'reports'
+
+
+############################################
+STEP 4: Deleted system configuration file
+############################################
+2026-07-20 09:13:40 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 09:13:40 INFO Integrity check complete: 0 modified, 0 new, 1 deleted, 3 unchanged.
+2026-07-20 09:13:40 WARNING DELETED FILE detected: system_config.conf [Severity: CRITICAL]
+
+Scan complete: 3 file(s) scanned.
+  Modified: 0   New: 0   Deleted: 1   Unchanged: 3
+
+1 alert(s) generated:
+
+=====================================
+FILE INTEGRITY ALERT
+=====================================
+
+Event Type:
+DELETED FILE
+
+File:
+system_config.conf
+
+Severity:
+CRITICAL
+
+Previous Hash:
+
+3ca268337c086a2b3fb3ca6332a5304fcfe27226952fb17f37aab2303cd10dbf
+
+Timestamp:
+2026-07-20 09:13:40
+
+MITRE ATT&CK Reference:
+T1070 - Indicator Removal
+
+Recommendation:
+
+- Confirm whether deletion was part of an authorized maintenance task.
+- Check for signs of anti-forensic activity (log/indicator removal).
+- Restore the file from a known-good backup if unauthorized.
+
+=====================================
+
+2026-07-20 09:13:40 INFO JSON report written to 'reports/integrity_report.json'.
+2026-07-20 09:13:40 INFO CSV report written to 'reports/integrity_report.csv'.
+2026-07-20 09:13:40 INFO Text summary report written to 'reports/incident_summary.txt'.
+Reports written to 'reports'
+
+

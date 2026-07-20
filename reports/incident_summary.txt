@@ -1,0 +1,26 @@
+File Integrity Monitoring Summary
+========================================
+
+Generated: 2026-07-20 12:41:32
+
+Files Scanned:      3
+Modified:           1
+New:                0
+Deleted:            0
+Unchanged:          2
+
+Alert Breakdown by Severity
+----------------------------------------
+CRITICAL Alerts:    0
+HIGH Alerts:        1
+MEDIUM Alerts:      0
+LOW Alerts:         0
+
+Detailed Alerts
+----------------------------------------
+
+[HIGH] MODIFIED FILE - important_config.conf
+  Timestamp: 2026-07-20 12:41:32
+  Previous Hash: d73bb3fec31c1a3f69d84fd7cc5c9d7ad0333693a51ddd5aabb70fa6b135284f
+  Current Hash:  3c1796e05afbdb92f35b0175c9fca3804b59649dba5025535513e6b693ddb72e
+  MITRE ATT&CK: T1565 - Data Manipulation

@@ -1,0 +1,5 @@
+This is a sample file used to demonstrate the File Integrity Monitoring
+system. It represents an ordinary, low-sensitivity file that may be
+updated from time to time as part of normal operations.
+
+Version: 1.0

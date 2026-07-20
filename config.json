@@ -1,0 +1,29 @@
+{
+  "monitor_directory": "monitored_directory",
+  "baseline_path": "baseline/baseline.json",
+  "reports_directory": "reports",
+  "log_path": "logs/fim.log",
+  "hash_algorithm": "sha256",
+  "excluded_extensions": [
+    ".tmp",
+    ".log"
+  ],
+  "excluded_files": [
+    ".DS_Store",
+    "Thumbs.db"
+  ],
+  "severity_threshold": "medium",
+  "sensitive_files": [
+    "important_config.conf",
+    "system_config.conf"
+  ],
+  "executable_extensions": [
+    ".exe",
+    ".dll",
+    ".sh",
+    ".bat",
+    ".ps1"
+  ],
+  "critical_multi_change_threshold": 3,
+  "monitor_poll_interval_seconds": 5
+}

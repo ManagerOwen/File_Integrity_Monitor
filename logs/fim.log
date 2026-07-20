@@ -1,0 +1,22 @@
+2026-07-20 09:13:57 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 09:13:57 INFO Baseline created with 3 file(s) at 'baseline/baseline.json'.
+2026-07-20 09:13:57 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 09:13:57 INFO Integrity check complete: 0 modified, 0 new, 0 deleted, 3 unchanged.
+2026-07-20 09:13:57 INFO JSON report written to 'reports/integrity_report.json'.
+2026-07-20 09:13:57 INFO CSV report written to 'reports/integrity_report.csv'.
+2026-07-20 09:13:57 INFO Text summary report written to 'reports/incident_summary.txt'.
+2026-07-20 12:36:05 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 12:36:05 INFO Baseline created with 3 file(s) at 'baseline\baseline.json'.
+2026-07-20 12:36:17 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 12:36:17 INFO Integrity check complete: 0 modified, 0 new, 0 deleted, 3 unchanged.
+2026-07-20 12:36:17 INFO JSON report written to 'reports\integrity_report.json'.
+2026-07-20 12:36:17 INFO CSV report written to 'reports\integrity_report.csv'.
+2026-07-20 12:36:17 INFO Text summary report written to 'reports\incident_summary.txt'.
+2026-07-20 12:41:32 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 12:41:32 INFO Integrity check complete: 1 modified, 0 new, 0 deleted, 2 unchanged.
+2026-07-20 12:41:32 WARNING MODIFIED FILE detected: important_config.conf [Severity: HIGH]
+2026-07-20 12:41:32 INFO JSON report written to 'reports\integrity_report.json'.
+2026-07-20 12:41:32 INFO CSV report written to 'reports\integrity_report.csv'.
+2026-07-20 12:41:32 INFO Text summary report written to 'reports\incident_summary.txt'.
+2026-07-20 12:42:28 INFO File scan complete: 3 file(s) discovered in 'monitored_directory'.
+2026-07-20 12:42:28 INFO Baseline created with 3 file(s) at 'baseline\baseline.json'.

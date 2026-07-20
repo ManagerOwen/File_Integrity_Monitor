@@ -1,0 +1,12 @@
+[
+  {
+    "incident_type": "Modified File",
+    "file": "important_config.conf",
+    "severity": "HIGH",
+    "timestamp": "2026-07-20 12:41:32",
+    "previous_hash": "d73bb3fec31c1a3f69d84fd7cc5c9d7ad0333693a51ddd5aabb70fa6b135284f",
+    "current_hash": "3c1796e05afbdb92f35b0175c9fca3804b59649dba5025535513e6b693ddb72e",
+    "mitre_attack": "T1565 - Data Manipulation",
+    "recommendation": "Verify change authorization with the responsible team.; Investigate recent user and process activity on the host.; Review system and application logs around the timestamp.; Check the file and host for signs of malware infection."
+  }
+]

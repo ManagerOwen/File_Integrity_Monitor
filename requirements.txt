@@ -1,0 +1,12 @@
+# File Integrity Monitoring System - Dependencies
+#
+# The core system is built entirely on the Python 3 standard library
+# (hashlib, os, pathlib, json, csv, datetime, argparse, logging, shutil)
+# and has NO required third-party dependencies.
+#
+# The packages below are OPTIONAL and only needed if you want to enable
+# the bonus features described in the README (real-time monitoring and
+# colored terminal output).
+
+watchdog>=4.0.0     # optional: real-time filesystem event monitoring
+colorama>=0.4.6     # optional: colored terminal alert output
