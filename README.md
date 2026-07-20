@@ -6,7 +6,6 @@ This project demonstrates practical cybersecurity concepts used in **Security Op
 ---
 
 ## Cybersecurity Focus Areas
-
 - Security Operations Center (SOC)
 - Endpoint Security
 - Threat Detection
@@ -27,7 +26,6 @@ Unexpected file changes can indicate:
 - Possible security compromise
 
 This project implements a lightweight File Integrity Monitoring engine that:
-
 1. Creates a trusted baseline of monitored files using SHA-256 cryptographic hashes and metadata.
 2. Scans directories and compares current file states against the trusted baseline.
 3. Detects modified, newly created, and deleted files.
@@ -37,7 +35,6 @@ This project implements a lightweight File Integrity Monitoring engine that:
 ---
 
 # Features
-
 ## File Integrity Monitoring
 - SHA-256 cryptographic hashing
 - Recursive directory scanning
@@ -60,7 +57,6 @@ The system identifies:
 ---
 
 ## Security Alerting
-
 Events are classified into:
 | Severity | Description |
 |----------|-------------|
@@ -107,7 +103,6 @@ Requires Python 3.10+ (uses modern type-hint syntax).
 ---
 
 ## Usage
-
 Create the trusted baseline (run this first, and again any time changes
 are reviewed and approved):
 
@@ -143,7 +138,6 @@ python main.py --scan --directory /path/to/other/directory
 ---
 
 ## Example Output
-
 ```
 =====================================
 FILE INTEGRITY ALERT
@@ -191,7 +185,6 @@ CRITICAL, and CRITICAL respectively.
 ---
 
 ## Security Concepts Demonstrated
-
 - **Cryptographic integrity verification** - Using SHA-256 hashing to detect unauthorized changes to files.
 - **Endpoint security monitoring** - Applying file monitoring concepts used in enterprise security environments.
 - **Digital forensics fundamentals** - Creating trusted baselines and identifying changes from known-good states.
@@ -202,7 +195,6 @@ CRITICAL, and CRITICAL respectively.
 ---
 
 ## Future Improvements
-
 - Real-time monitoring using the `watchdog` library instead of polling
 - Risk-score calculation that blends severity, asset sensitivity, and change frequency
 - SQLite-backed hash comparison history for longer-term trend analysis
@@ -214,8 +206,7 @@ CRITICAL, and CRITICAL respectively.
 ---
 
 ## Disclaimer
-
 This is a defensive security portfolio project built for educational and
 demonstration purposes. `suspicious_tool.exe` referenced in the sample
 walkthrough is a plain text placeholder file used only to demonstrate
-detection logic — it contains no executable code and is not malware.
+detection logic - it contains no executable code and is not malware.
