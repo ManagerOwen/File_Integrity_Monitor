@@ -1,52 +1,94 @@
 # File Integrity Monitoring System (FIM)
+A Python-based defensive security tool that detects unauthorized file changes using cryptographic hashing, baseline comparison, and automated security reporting.
 
-A Python-based defensive security tool that detects unauthorized file
-changes using cryptographic hashing - conceptually similar to enterprise
-File Integrity Monitoring solutions such as *Tripwire*, *OSSEC*, and
-*Wazuh*.
-
-*Cybersecurity Focus:* SOC Operations · Endpoint Security · Incident Response · Threat Detection · Security Automation
+This project demonstrates practical cybersecurity concepts used in **Security Operations (SOC), Endpoint Security, Incident Response, and Security Automation**.
 
 ---
 
-## Project Overview
+## Cybersecurity Focus Areas
 
-File Integrity Monitoring (FIM) is a core control in most security
-frameworks (PCI-DSS, NIST 800-53, CIS Controls) because it detects when
-critical files - configuration files, executables, system files - have
-been changed, added, or removed without authorization. These changes are
-often early indicators of malware infection, insider misuse, or an
-active intrusion.
-
-This project implements a lightweight, dependency-free FIM engine that:
-
-1. Builds a *trusted baseline* of every file in a monitored directory,
-   recording its SHA-256 hash and metadata.
-2. Re-scans the directory on demand (or continuously) and *compares*
-   the current state against the baseline.
-3. Classifies each detected change - *modified*, *new*, or
-   *deleted* - with a *severity level* (LOW / MEDIUM / HIGH /
-   CRITICAL) and maps it to a relevant *MITRE ATT&CK* technique.
-4. Produces *JSON, CSV, and plain-text* security reports suitable for
-   SIEM ingestion, ticketing systems, or human review.
+- Security Operations Center (SOC)
+- Endpoint Security
+- Threat Detection
+- Incident Response
+- Security Automation
+- Defensive Security
 
 ---
 
-## Features
+# Project Overview
+File Integrity Monitoring (FIM) is a security capability used to identify unauthorized changes to important files, configurations, and system resources.
 
-- SHA-256 (or SHA-1/MD5) cryptographic hashing of every monitored file
-- Recursive directory scanning with configurable file/extension exclusions
-- Trusted baseline creation, loading, and controlled updates
-- Detection of *modified*, *new*, and *deleted* files
-- Four-tier severity classification (LOW / MEDIUM / HIGH / CRITICAL)
-- Automatic escalation to CRITICAL when multiple unauthorized changes
-  occur in a single scan (a common ransomware/mass-tampering indicator)
-- MITRE ATT&CK technique mapping for each event type
-- JSON, CSV, and human-readable text report generation
-- Full audit logging to `logs/fim.log`
-- Continuous monitoring mode (`--monitor`) with configurable poll interval
-- Command-line interface built with `argparse`
-- Zero required third-party dependencies (standard library only)
+Unexpected file changes can indicate:
+- Malware activity
+- Unauthorized modifications
+- Insider threats
+- Configuration tampering
+- Possible security compromise
+
+This project implements a lightweight File Integrity Monitoring engine that:
+
+1. Creates a trusted baseline of monitored files using SHA-256 cryptographic hashes and metadata.
+2. Scans directories and compares current file states against the trusted baseline.
+3. Detects modified, newly created, and deleted files.
+4. Classifies security events based on severity.
+5. Generates investigation reports in JSON, CSV, and text formats.
+
+---
+
+# Features
+
+## File Integrity Monitoring
+- SHA-256 cryptographic hashing
+- Recursive directory scanning
+- File metadata collection
+- Baseline creation and verification
+- Detection of file modifications
+- Detection of new files
+- Detection of deleted files
+
+---
+
+## Security Detection
+The system identifies:
+- Unauthorized file modifications
+- Suspicious executable creation
+- Configuration changes
+- Missing critical files
+- Multiple file changes during a single scan
+
+---
+
+## Security Alerting
+
+Events are classified into:
+| Severity | Description |
+|----------|-------------|
+| LOW | Expected or low-risk changes |
+| MEDIUM | Suspicious file activity requiring review |
+| HIGH | Potential security incident |
+| CRITICAL | Indicators of possible compromise |
+
+---
+
+## Reporting
+Generates:
+- JSON security reports
+- CSV investigation reports
+- Human-readable incident summaries
+- Audit logs
+
+---
+
+# Technologies Used
+- Python 3
+- SHA-256 Hashing
+- JSON
+- CSV
+- argparse
+- pathlib
+- hashlib
+- Python Logging Module
 
 ---
 
@@ -143,27 +185,22 @@ Recommendation:
 See [`sample_output.txt`](sample_output.txt) for a full walkthrough
 covering four scenarios: a routine low-risk update, an unauthorized
 sensitive-config change, a suspicious new executable, and a deleted
-system configuration file - showing how each is classified LOW, HIGH,
+system configuration file — showing how each is classified LOW, HIGH,
 CRITICAL, and CRITICAL respectively.
 
 ---
 
 ## Security Concepts Demonstrated
 
-- *Cryptographic integrity verification* using SHA-256
-- *Endpoint security monitoring* patterns used by EDR/FIM agents
-- *Digital forensics fundamentals* - establishing a trusted baseline
-  and detecting drift from it
-- *Threat detection & triage* - severity classification and escalation
-  logic modeled on SOC playbooks
-- *MITRE ATT&CK mapping* - connecting observed events (data
+- **Cryptographic integrity verification** Using SHA-256 hashing to detect unauthorized changes to files.
+- **Endpoint security monitoring** Applying file monitoring concepts used in enterprise security environments.
+- **Digital forensics fundamentals** — Creating trusted baselines and identifying changes from known-good states.
+- **Threat detection & triage** — Classifying security events based on risk and investigation priority.
+- **MITRE ATT&CK mapping** — connecting observed events (data
   manipulation, indicator removal, autostart execution) to known
   adversary techniques
-- *Security automation* - scheduled/continuous scanning and automatic
-  report generation
-- *Audit logging* - a durable, timestamped record of all security-
-  relevant activity for incident investigation
-
+- **Security automation** — Automating repetitive security monitoring and reporting tasks.
+- **Audit logging** — Maintaining records of security-relevant events for investigation.
 ---
 
 ## Future Improvements
@@ -183,4 +220,4 @@ CRITICAL, and CRITICAL respectively.
 This is a defensive security portfolio project built for educational and
 demonstration purposes. `suspicious_tool.exe` referenced in the sample
 walkthrough is a plain text placeholder file used only to demonstrate
-detection logic - it contains no executable code and is not malware.
+detection logic — it contains no executable code and is not malware.
